@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  title = 'Reddit!';
+}
+
+export class Post {
+  public showing: boolean = false;
+  constructor(public title: string, public image: string, public content: string) {}
 }
