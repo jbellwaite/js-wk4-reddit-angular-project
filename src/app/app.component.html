@@ -1,3 +1,22 @@
-<h1>
-  {{title}}
-</h1>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" routerLink="">Epicodus Tunes</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a routerLink="hot">hot</a></li>
+      <li><a routerLink="new">new</a></li>
+      <li><a routerLink="rising">rising</a></li>
+      <li><a routerLink="controversial">controversial</a></li>
+      <li><a routerLink="top">top</a></li>
+      <li><a routerLink="gilded">gilded</a></li>
+      <li><a routerLink="wiki">wiki</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <h1>{{title}}</h1>
+  <router-outlet></router-outlet>
+</div>

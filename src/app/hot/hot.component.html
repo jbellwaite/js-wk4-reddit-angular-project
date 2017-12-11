@@ -1,0 +1,20 @@
+<h1>Hot</h1>
+<ul>
+  <li (click)="viewPost(currentPost)" *ngFor="let currentPost of posts">{{currentPost.title}}</li>
+</ul>
+<form>
+  <label for="postName">Enter a title for your post</label>
+  <input type="text" #postName><br>
+  <label for="postUrl">Enter a URL for the post's image</label>
+  <input type="url" #postUrl><br>
+  <label for="postContent"></label>
+  <input type="text" #postContent><br>
+
+  <button type="button" name="button" (click)="newPost(postName.value, postUrl.value, postContent.value)">Add</button>
+</form>
+
+<div class="container" *ngIf="selectedPost">
+  <h2>{{selectedPost.title}}</h2>
+  <img src={{selectedPost.image}} alt="post image">
+  <p>{{selectedPost.content}}</p>
+</div>
