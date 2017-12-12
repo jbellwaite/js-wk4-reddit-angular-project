@@ -1,0 +1,13 @@
+.navbar {
+  background-color: lightblue;
+}
+
+.header-thing {
+  background-image: url("https://www.redditstatic.com/listingsignupbar-orbit-1.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 100%;
+  background-color: white;
+}

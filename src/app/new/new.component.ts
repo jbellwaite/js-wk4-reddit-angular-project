@@ -16,11 +16,24 @@ posts: Post [] = [
 
 selectedPosting: Post = this.posts[0];
 selectedPost = null;
+clickedButton = false;
 
 newPost(title, url, content) {
   let newposting = new Post(title, url, content);
   this.posts.push(newposting);
 }
+
+clickAdd(){
+  this.clickedButton = !this.clickedButton;
+}
+
+deletePost() {
+  let deletedPost = this.selectedPost;
+  let index = this.posts.indexOf(deletedPost);
+  this.posts.splice(index, 1);
+  this.viewPost(deletedPost);
+}
+
 
 viewPost(currentPost){
   if(currentPost.showing) {

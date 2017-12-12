@@ -1,0 +1,14 @@
+.remove-dots {
+  display: block;
+}
+
+.list-image {
+  height: 70px;
+  margin: 10px;
+}
+
+li {
+  margin: 10px;
+  color: blue;
+  font-size: 17px;
+}

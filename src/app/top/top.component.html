@@ -1,3 +1,24 @@
-<p>
-  top works!
-</p>
+<h1>Top</h1>
+<ul>
+  <li class="remove-dots" (click)="viewPost(currentPost)" *ngFor="let currentPost of posts"><img class="list-image" src="{{currentPost.image}}" alt="">{{currentPost.title}}</li>
+</ul>
+
+<button type="button" name="button" (click)="clickAdd()">Add a new post</button>
+
+<div class="container" *ngIf="clickedButton">
+  <form>
+    <label for="postName">Enter a title for your post</label>
+    <input type="text" #postName><br>
+    <label for="postUrl">Enter a URL for the post's image</label>
+    <input type="url" #postUrl><br>
+    <label for="postContent"></label>
+
+    <button type="button" name="button" (click)="newPost(postName.value, postUrl.value, postContent.value)">Add</button>
+  </form>
+</div>
+
+<div class="container" *ngIf="selectedPost">
+  <h2>{{selectedPost.title}}</h2>
+  <img src={{selectedPost.image}} alt="post image">
+  <p>{{selectedPost.content}}</p>
+</div>
